@@ -34,11 +34,7 @@ export interface ContentUploadOptions {
 	refetchContent: (cacheBehaviour?: CacheBehaviour) => Promise<void>
 }
 
-export function useContentUpload({
-	instance,
-	items,
-	refetchContent,
-}: ContentUploadOptions) {
+export function useContentUpload({ instance, items, refetchContent }: ContentUploadOptions) {
 	const { formatMessage } = useVIntl()
 	const { handleError, addNotification } = injectNotificationManager()
 	const appSettings = useAppSettings()
